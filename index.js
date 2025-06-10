@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const express = require("express");
@@ -16,6 +18,7 @@ const { error } = require("console");
 const travelStoryModels = require("./models/travel-story-models");
 
 mongoose.connect(process.env.MONGODB_CONFIG);
+
 
 const app = express();
 app.use(express.json());
